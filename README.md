@@ -41,9 +41,9 @@ This template handles page language functionality, where the available languages
 
 The Digital Data Object a flexible, customizable collection of metadata that also provides tools and services such as live chat and analytics to page authors. You can find more details on [Building for IBM.com](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md).
 
-The template has a placeholder DDO you can define located in the `pages/data/DDO.json` file. Example values shown below:
+The template has a placeholder DDO you can define located in `pages/data/DDO.json. Example values shown below:
 
-```
+```javascript
 <script>
   digitalData = {
     page: {
@@ -71,4 +71,28 @@ The template has a placeholder DDO you can define located in the `pages/data/DDO
     }
   };
 </script>
+```
+
+### Meta Tags & IBM.com Tag Management and Site Analytics
+
+The template already renders the required meta tags and IBM.com analytics script that are required for IBM.com websites. They are located in `pages/_app.js`.These can be adjusted/removed to fit your project and needs.
+
+Meta Tags:
+
+```html
+<meta charset="UTF-8" />
+
+<link rel="icon" href="//www.ibm.com/favicon.ico" />
+
+<meta name="dcterms.date" content="YYYY-MM-DD" />
+<meta name="dcterms.rights" content="© Copyright IBM Corp. 2016" />
+<meta name="geo.country" content="US" />
+<meta name="robots" content="index,follow" />
+```
+
+IBM.com Tag Management and Site Analytics Script
+
+```html
+<!-- IBM Tag Management and Site Analytics -->
+<script src="//1.www.s81c.com/common/stats/ibm-common.js"></script>
 ```
