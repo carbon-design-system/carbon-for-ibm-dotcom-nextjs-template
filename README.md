@@ -6,8 +6,8 @@
 - [Getting Started](#getting-started)
 - [Things to Note](#things-to-note)
   - [Page Language](#page-language)
-  - [Digital Data Object](<#digital-data-object-(DDO)>)
-  - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-&-IBM.com-tag-management-and-site-analytics)
+  - [Digital Data Object](#digital-data-object)
+  - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-&-IBMcom-tag-management-and-site-analytics)
 
 ## Overview
 
@@ -57,9 +57,9 @@ If building an IBM.com page, there are items that need to be included which can 
 
 This template handles page language functionality, where the available languages are defined in `components/data/altlang.json`. The `Altlangs` component then generates all alternate links to be injected into the `<head>` element.
 
-### Digital Data Object (DDO)
+### Digital Data Object
 
-The Digital Data Object a flexible, customizable collection of metadata that also provides tools and services such as live chat and analytics to page authors. You can find more details on [Building for IBM.com](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md).
+The Digital Data Object (DDO) is a flexible, customizable collection of metadata that also provides tools and services such as live chat and analytics to page authors. You can find more details on [Building for IBM.com](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md).
 
 The template has a placeholder DDO you can define located in `pages/data/DDO.json. Example values shown below:
 
