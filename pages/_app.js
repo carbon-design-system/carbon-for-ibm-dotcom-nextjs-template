@@ -2,6 +2,7 @@ import "../styles/global.scss";
 
 import Altlang from "../components/altlang";
 import App from "next/app";
+import DDO from "./data/DDO.json";
 import { DotcomShell } from "@carbon/ibmdotcom-react";
 import Head from "next/head";
 import packageJson from "../package.json";
@@ -48,6 +49,7 @@ export default class IbmdotcomLibrary extends App {
     const useLang = _getLang(router);
     const reactVersion = packageJson.dependencies["@carbon/ibmdotcom-react"];
     const stylesVersion = packageJson.dependencies["@carbon/ibmdotcom-styles"];
+    const digitalData = `digitalData=${JSON.stringify(DDO)};`;
     return (
       <>
         <Head>
@@ -63,6 +65,8 @@ export default class IbmdotcomLibrary extends App {
           <meta name="dcterms.rights" content="© Copyright IBM Corp. 2020" />
           <meta name="geo.country" content="US" />
           <meta name="robots" content="index,follow" />
+
+          <script dangerouslySetInnerHTML={{ __html: digitalData }} />
 
           <script
             dangerouslySetInnerHTML={{
