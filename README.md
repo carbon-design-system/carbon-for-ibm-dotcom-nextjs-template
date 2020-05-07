@@ -1,18 +1,38 @@
 <h1 align="center"> IBM.com Library React with Next.js Template</h1>
 
-This is a Next.js template utilizing the IBM.com Library React.
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+- [Things to Note](#things-to-note)
+  - [Page Language](#page-language)
+  - [Digital Data Object](<#digital-data-object-(DDO)>)
+  - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-&-IBM.com-tag-management-and-site-analytics)
+
+## Overview
+
+This is a Next.js template utilizing the IBM.com React Library, deploying a vanilla instance of Next.js with the [DotcomShell](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/packages/react/src/components/DotcomShell/README.md),
+along with other various patterns and components available in the IBM.com Library.
 
 ## Getting Started
 
-This will deploy a vanilla instance of Next.js with the
-[DotcomShell](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/packages/react/src/components/DotcomShell/README.md),
-along with other various patterns and components available in the IBM.com Library.
+Get the code by cloning this repo using git
 
-To get
-started:
+```bash
+git clone https://github.com/carbon-design-system/ibm-dotcom-library-nextjs-template.git
+```
+
+Once cloned, go to the project directory and install dependencies
 
 ```bash
 $ yarn install
+```
+
+In order for certain services to work such as fetching the masthead/footer menu data in the `<DotcomShell>`, you will have to set environment variables in a `.env` file. Please see `.env.example`.
+
+```
+CORS_PROXY=https://myproxy.com/
+ROOT_PATH=/
 ```
 
 Then start the application:
@@ -96,7 +116,3 @@ IBM.com Tag Management and Site Analytics Script
 <!-- IBM Tag Management and Site Analytics -->
 <script src="//1.www.s81c.com/common/stats/ibm-common.js"></script>
 ```
-
-## Environment Variables
-
-In order for certain services to work such as fetching the masthead/footer menu data in the `<DotcomShell>`, you will have to set environment variables in a `.env` file. Please see `.env.example`.
