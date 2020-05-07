@@ -96,3 +96,7 @@ IBM.com Tag Management and Site Analytics Script
 <!-- IBM Tag Management and Site Analytics -->
 <script src="//1.www.s81c.com/common/stats/ibm-common.js"></script>
 ```
+
+## Environment Variables
+
+In order for certain services to work such as fetching the masthead/footer menu data in the `<DotcomShell>`, you will have to set environment variables in a `.env` file. Please see `.env.example`.
