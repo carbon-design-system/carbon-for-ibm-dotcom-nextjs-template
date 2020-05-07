@@ -1,0 +1,30 @@
+{
+  "name": "@carbon/stylelint-config-ibmdotcom",
+  "private": true,
+  "version": "1.5.0",
+  "description": "Stylelint configuration for the IBM.com Library",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "repository": "https://github.com/carbon-design-system/ibm-dotcom-library-nextjs-testy",
+  "bugs": "https://github.com/carbon-design-system/ibm-dotcom-library-nextjs-test/issues",
+  "keywords": [
+    "ibm",
+    "elements",
+    "carbon",
+    "carbon-elements",
+    "carbon-design-system",
+    "components",
+    "react"
+  ],
+  "peerDependencies": {
+    "stylelint": "^9.10.1"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.6",
+    "stylelint-scss": "^3.5.3"
+  },
+  "devDependencies": {
+    "stylelint": "^9.10.1"
+  }
+}
