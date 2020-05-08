@@ -31,8 +31,8 @@ $ yarn install
 In order for certain services to work such as fetching the masthead/footer menu data in the `<DotcomShell>`, you will have to set environment variables in a `.env` file. Please see `.env.example`.
 
 ```
-CORS_PROXY=https://myproxy.com/
-ROOT_PATH=/
+CORS_PROXY=<Sets the proxy for fetching the masthead/footer translation data, e.g. https://myproxy.com/>
+ROOT_PATH=<Sets the root path for language alternative urls, default is '/' >
 ```
 
 Then start the application:
@@ -47,7 +47,7 @@ To export to a static site, run the following:
 $ yarn build-export
 ```
 
-Then the contents of `out` can be uploaded to your production environment.
+Then the contents of the `out` folder can be uploaded to your production environment.
 
 ## Things to Note
 
