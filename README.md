@@ -7,7 +7,7 @@
 - [Things to Note](#things-to-note)
   - [Page Language](#page-language)
   - [Digital Data Object](#digital-data-object)
-  - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-&-IBMcom-tag-management-and-site-analytics)
+  - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-and-analytics)
 
 ## Overview
 
@@ -93,7 +93,7 @@ The template has a placeholder DDO you can define located in `pages/data/DDO.jso
 </script>
 ```
 
-### Meta Tags & IBM.com Tag Management and Site Analytics
+### Meta Tags and Analytics
 
 The template already renders the required meta tags and IBM.com analytics script that are required for IBM.com websites. They are located in `pages/_app.js`.These can be adjusted/removed to fit your project and needs.
 
