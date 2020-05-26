@@ -8,7 +8,7 @@
   - [Page Language](#page-language)
   - [Digital Data Object](#digital-data-object)
   - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-and-analytics)
-- [Locale / Language Page Detection](#locale-/-language-page-detection)
+- [Locale / Language Page Detection](#locale--language-page-detection)
 
 ## Overview
 
