@@ -8,7 +8,7 @@
   - [Page Language](#page-language)
   - [Digital Data Object](#digital-data-object)
   - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-and-analytics)
-- [Locale Selector](#locale-selector)
+- [Locale / Language Page Detection](#locale-/-language-page-detection)
 
 ## Overview
 
@@ -118,6 +118,6 @@ IBM.com Tag Management and Site Analytics Script
 <script src="//1.www.s81c.com/common/stats/ibm-common.js"></script>
 ```
 
-## Locale Selector
+## Locale / Language Page Detection
 
 The template uses `_document.js` to dynamically change the html `lang` attribute that is used for the Locale Selector services. This is currently NextJS's only documented way of augmenting the document markup. There are some caveats with this approach - one being that the `lang` does not get updated when you export your app to static HTML. We suggest moving the `lang` swapping logic out to client side if you wish to export to a static site.
