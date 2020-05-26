@@ -20,33 +20,34 @@ const _defaultLang = {
 };
 
 /**
- * Gets the lang combination based on passed in query param object
- *
- * @param {object} router Router object
- * @returns {object} lang code object
- * @private
- */
-function _getLang(router) {
-  return router && router.query && router.query.lc
-    ? {
-        lc: router.query.lc,
-        cc: router.query.cc,
-      }
-    : _defaultLang;
-}
-
-/**
  * Class IbmdotcomLibrary
  */
 export default class IbmdotcomLibrary extends App {
+  /**
+   * Loads in the initial query string parameters
+   *
+   * @param {object} props page props
+   * @param {object} props.ctx app context
+   * @returns {Promise<{pageProps}>} Returns the pageProps
+   */
+  static async getInitialProps({ ctx }) {
+    const useLang =
+      ctx.query && ctx.query.lc
+        ? {
+            lc: ctx.query.lc,
+            cc: ctx.query.cc,
+          }
+        : _defaultLang;
+
+    return { useLang, query: ctx.query };
+  }
   /**
    * Renders the DotcomShell
    *
    * @returns {*} Page wrapper JSX
    */
   render() {
-    const { Component, pageProps, router } = this.props;
-    const useLang = _getLang(router);
+    const { Component, pageProps, useLang } = this.props;
     const reactVersion = packageJson.dependencies["@carbon/ibmdotcom-react"];
     const stylesVersion = packageJson.dependencies["@carbon/ibmdotcom-styles"];
     const digitalData = `digitalData=${JSON.stringify(DDO)};`;
@@ -67,16 +68,6 @@ export default class IbmdotcomLibrary extends App {
           <meta name="robots" content="index,follow" />
 
           <script dangerouslySetInnerHTML={{ __html: digitalData }} />
-
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            var params = new URLSearchParams(window.location.search);
-            var lang = params.has('lc') ? params.get('lc') + '-' + params.get('cc') : 'en-US';
-            document.getElementsByTagName("html")[0].setAttribute("lang", lang);
-           `,
-            }}
-          />
           <Altlang />
         </Head>
         <DotcomShell navigation="default" langCode={useLang}>
