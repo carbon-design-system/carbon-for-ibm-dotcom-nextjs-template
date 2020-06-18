@@ -4,9 +4,9 @@
 @import "~@carbon/ibmdotcom-styles/scss/patterns/blocks/content-block-simple/index";
 @import "~@carbon/ibmdotcom-styles/scss/patterns/sections/card-section-images/card-section-images";
 @import "~@carbon/ibmdotcom-styles/scss/patterns/sections/card-section-simple/card-section-simple";
-@import "~@carbon/ibmdotcom-styles/scss/patterns/sub-patterns/tableofcontents/index";
-@import "~@carbon/ibmdotcom-styles/scss/patterns/sub-patterns/link-list/index";
-@import "~@carbon/ibmdotcom-styles/scss/patterns/sub-patterns/layout/layout";
+@import "~@carbon/ibmdotcom-styles/scss/components/tableofcontents/index";
+@import "~@carbon/ibmdotcom-styles/scss/components/link-list/index";
+@import "~@carbon/ibmdotcom-styles/scss/components/layout/layout";
 @import "~@carbon/ibmdotcom-styles/scss/patterns/sections/leadspace/leadspace";
 
 .bx--content-section:not(:last-child) {
