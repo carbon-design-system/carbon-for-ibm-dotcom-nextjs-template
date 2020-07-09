@@ -4,6 +4,8 @@ const withCSS = require("@zeit/next-css");
 const withSass = require("@zeit/next-sass");
 const withProgressBar = require("next-progressbar");
 
+const NODE_ENV = "development";
+
 const styleLoaders = [
   {
     loader: "postcss-loader",
@@ -16,19 +18,33 @@ const styleLoaders = [
       },
     },
   },
-  {
-    loader: "sass-loader",
-    options: {
-      includePaths: [path.resolve(__dirname, "node_modules")],
-      data: `
+];
+
+const sassLoader = {
+  loader: "sass-loader",
+  options: {
+    includePaths: [path.resolve(__dirname, "node_modules")],
+    data: `
       $feature-flags: (
         ui-shell: true,
       );
     `,
-      sourceMap: true,
-    },
+    sourceMap: true,
   },
-];
+};
+
+const fastSassLoader = {
+  loader: "fast-sass-loader",
+  options: {
+    includePaths: [path.resolve(__dirname, "node_modules")],
+    data: `
+    $feature-flags: (
+      ui-shell: true,
+    );
+  `,
+    sourceMap: true,
+  },
+};
 
 module.exports = withProgressBar(
   withSass(
@@ -45,7 +61,10 @@ module.exports = withProgressBar(
         config.module.rules.push({
           test: /\.scss$/,
           sideEffects: true,
-          use: [...styleLoaders],
+          use: [
+            ...styleLoaders,
+            NODE_ENV === "production" ? sassLoader : fastSassLoader,
+          ],
         });
 
         return config;
