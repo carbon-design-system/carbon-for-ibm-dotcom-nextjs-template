@@ -49,7 +49,6 @@ const fastSassLoader = {
 module.exports = withProgressBar(
   withSass(
     withCSS({
-      assetPrefix: ".",
       env: {
         CORS_PROXY: process.env.CORS_PROXY || "",
         ROOT_PATH: process.env.ROOT_PATH || "/",
