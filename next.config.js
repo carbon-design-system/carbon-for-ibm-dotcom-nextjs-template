@@ -3,7 +3,7 @@ const path = require("path");
 const withSass = require("@zeit/next-sass");
 
 module.exports = withSass({
-  basePath: process.env.BASE_PATH || ".",
+  basePath: process.env.BASE_PATH || "",
   env: {
     CORS_PROXY: process.env.CORS_PROXY || "",
     ALTLANG_ROOT_PATH: process.env.ALTLANG_ROOT_PATH || "/",
