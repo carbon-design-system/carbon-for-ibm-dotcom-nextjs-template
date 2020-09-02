@@ -3,11 +3,13 @@ import React from "react";
 
 /**
  * Sets the root path of the alternative urls
+ * Learn more about configuring alternative languages at:
+ * https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md
  *
  * @type {string|string}
  * @private
  */
-const _rootPath = process.env.ROOT_PATH || "/";
+const _rootPath = process.env.ALTLANG_ROOT_PATH || "/";
 
 /**
  * Renders the list of altlang items
