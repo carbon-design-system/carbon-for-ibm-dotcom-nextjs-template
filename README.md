@@ -34,7 +34,7 @@ have to set environment variables in a `.env` file. Please see `.env.example`.
 
 ```
 CORS_PROXY=<Sets the proxy for fetching the masthead/footer translation data, e.g. https://myproxy.com/>
-BASE_PATH=<Sets the base directory for urls and assets, default is '.' >
+BASE_PATH=<Sets the base directory for urls and assets, default is '' >
 ALTLANG_ROOT_PATH=<Sets the root path for language alternative urls, default is '/' >
 ```
 
