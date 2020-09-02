@@ -51,6 +51,7 @@ export default class IbmdotcomLibrary extends App {
     const reactVersion = packageJson.dependencies["@carbon/ibmdotcom-react"];
     const stylesVersion = packageJson.dependencies["@carbon/ibmdotcom-styles"];
     const digitalData = `digitalData=${JSON.stringify(DDO)};`;
+
     return (
       <>
         <Head>
