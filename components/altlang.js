@@ -19,9 +19,10 @@ const _rootPath = process.env.ALTLANG_ROOT_PATH || "/";
  */
 const _renderAltLangs = () => {
   let langs = [];
-  altlangs.forEach((alt) => {
+  altlangs.forEach((alt, i) => {
     langs.push(
       <link
+        key={i}
         rel="alternate"
         hrefLang={`${alt.lc}-${alt.cc}`}
         href={`${_rootPath}?cc=${alt.cc}&lc=${alt.lc}`}
