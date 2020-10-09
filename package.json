@@ -1,8 +1,8 @@
 {
-  "name": "ibm-dotcom-library-nextjs-template",
+  "name": "carbon-for-ibm-dotcom-nextjs-template",
   "private": true,
   "version": "0.0.0",
-  "repository": "git@github.com:carbon-design-system/ibm-dotcom-library-nextjs-template.git",
+  "repository": "git@github.com:carbon-design-system/carbon-for-ibm-dotcom-nextjs-template.git",
   "license": "Apache-2.0",
   "engines": {
     "node": "12.x"

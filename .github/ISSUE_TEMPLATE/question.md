@@ -1,6 +1,6 @@
 ---
 name: Question 🤔
-about: Usage question or discussion about the IBM.com Library.
+about: Usage question or discussion about Carbon for IBM.com.
 labels: question
 assignees: jeffchew, wonilsuhibm, ljcarot, RobertaJHahn, RaphaelAmadeu, jacobottesen-dgc
 ---
@@ -15,7 +15,7 @@ them yet 🙂.
 If you're an IBMer, we have a couple of Slack channels available across all IBM
 Workspaces:
 
-- #ibm-digital-design for questions about the IBM.com Library
+- #ibm-digital-design for questions about Carbon for IBM.com
 - #carbon-design-system for questions about the Carbon Design System
 
 If these resources don't work out, help us out by filling out a couple of
