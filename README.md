@@ -29,7 +29,7 @@ Once cloned, go to the project directory and install dependencies
 $ yarn install
 ```
 
-In order for certain services to such as enabling RTL (Right-to-Left), you will
+In order to enable features like Right-to-Left (RTL), you will
 have to set environment variables in a `.env` file. Please see `.env.example`.
 
 ```
