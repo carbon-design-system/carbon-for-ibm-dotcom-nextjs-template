@@ -29,13 +29,13 @@ Once cloned, go to the project directory and install dependencies
 $ yarn install
 ```
 
-In order for certain services to work such as fetching the masthead/footer menu data in the `<DotcomShell>`, you will
+In order to enable features like Right-to-Left (RTL), you will
 have to set environment variables in a `.env` file. Please see `.env.example`.
 
 ```
-CORS_PROXY=<Sets the proxy for fetching the masthead/footer translation data, e.g. https://myproxy.com/>
 BASE_PATH=<Sets the base directory for urls and assets, default is '' >
 ALTLANG_ROOT_PATH=<Sets the root path for language alternative urls, default is '/' >
+ENABLE_RTL=<Boolean to enable RTL for the page, eg. false >
 ```
 
 Then start the application:
@@ -52,10 +52,9 @@ $ yarn build-export
 
 Then the contents of the `out` folder can be uploaded to your production environment.
 
-## CORS Proxy
+## Right-to-Left (RTL)
 
-The `CORS_PROXY` must be configured in order to properly render the Masthead/Footer links in its default state. To read
-more, visit [CORS Proxy](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/cors-proxy.md).
+Right-to-left rendering is supported, to enable set the `ENABLE_RTL` environment variable to `true`.
 
 ## Things to Note
 
