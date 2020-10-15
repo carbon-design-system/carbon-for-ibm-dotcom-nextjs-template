@@ -54,7 +54,7 @@ Then the contents of the `out` folder can be uploaded to your production environ
 
 ## Right-to-Left (RTL)
 
-Right-to-left rendering is supported, to enable set the `ENABLE_RTL` env variable to `true`.
+Right-to-left rendering is supported, to enable set the `ENABLE_RTL` environment variable to `true`.
 
 ## Things to Note
 
