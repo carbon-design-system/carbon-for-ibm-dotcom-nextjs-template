@@ -7,7 +7,6 @@ module.exports = withSass({
   assetPrefix: ".",
   basePath: process.env.BASE_PATH || "",
   env: {
-    CORS_PROXY: process.env.CORS_PROXY || "",
     ALTLANG_ROOT_PATH: process.env.ALTLANG_ROOT_PATH || "/",
     ENABLE_RTL: process.env.ENABLE_RTL || "false",
   },
