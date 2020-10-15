@@ -52,7 +52,7 @@ $ yarn build-export
 
 Then the contents of the `out` folder can be uploaded to your production environment.
 
-## RTL (Right-to-Left)
+## Right-to-Left (RTL)
 
 Right-to-left rendering is supported, to enable set the `ENABLE_RTL` env variable to `true`.
 
