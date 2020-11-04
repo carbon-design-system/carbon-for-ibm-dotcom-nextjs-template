@@ -1,12 +1,22 @@
 import "../styles/global.scss";
 
-import Altlang from "../components/altlang";
+import altlangs from "./data/altlang.json";
 import App from "next/app";
 import DDO from "./data/DDO.json";
 import { DotcomShell } from "@carbon/ibmdotcom-react";
 import Head from "next/head";
 import packageJson from "../package.json";
 import React from "react";
+
+/**
+ * Sets the root path of the alternative urls
+ * Learn more about configuring alternative languages at:
+ * https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md
+ *
+ * @type {string|string}
+ * @private
+ */
+const _rootPath = process.env.ALTLANG_ROOT_PATH || "/";
 
 /**
  * Class IbmdotcomLibrary
@@ -22,6 +32,15 @@ export default class IbmdotcomLibrary extends App {
     const reactVersion = packageJson.dependencies["@carbon/ibmdotcom-react"];
     const stylesVersion = packageJson.dependencies["@carbon/ibmdotcom-styles"];
     const digitalData = `digitalData=${JSON.stringify(DDO)};`;
+
+    const items = altlangs.map((alt, i) => (
+      <link
+        key={i}
+        rel="alternate"
+        hrefLang={`${alt.lc}-${alt.cc}`}
+        href={`${_rootPath}?cc=${alt.cc}&lc=${alt.lc}`}
+      />
+    ));
 
     return (
       <>
@@ -55,7 +74,7 @@ export default class IbmdotcomLibrary extends App {
            `,
             }}
           />
-          <Altlang />
+          {items}
           <script src="//1.www.s81c.com/common/stats/ibm-common.js" defer />
         </Head>
         <DotcomShell

@@ -9,7 +9,9 @@ module.exports = withSass({
     ALTLANG_ROOT_PATH: process.env.ALTLANG_ROOT_PATH || "/",
   },
   sassLoaderOptions: {
-    includePaths: [path.resolve(__dirname, "node_modules")],
+    sassOptions: {
+      includePaths: [path.resolve(__dirname, "node_modules")],
+    },
   },
   webpack: (config) => {
     config.module.rules.push({
@@ -33,8 +35,10 @@ module.exports = withSass({
               ? "sass-loader"
               : "fast-sass-loader",
           options: {
-            includePaths: [path.resolve(__dirname, "node_modules")],
-            data: `
+            sassOptions: {
+              includePaths: [path.resolve(__dirname, "node_modules")],
+            },
+            additionalData: `
               $feature-flags: (
                 enable-css-custom-properties: true
               );
