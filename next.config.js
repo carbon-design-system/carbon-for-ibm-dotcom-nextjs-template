@@ -1,12 +1,14 @@
 require("dotenv").config();
 const path = require("path");
 const withSass = require("@zeit/next-sass");
+const rtlcss = require("rtlcss");
 
 module.exports = withSass({
+  assetPrefix: ".",
   basePath: process.env.BASE_PATH || "",
   env: {
-    CORS_PROXY: process.env.CORS_PROXY || "",
     ALTLANG_ROOT_PATH: process.env.ALTLANG_ROOT_PATH || "/",
+    ENABLE_RTL: process.env.ENABLE_RTL || "false",
   },
   sassLoaderOptions: {
     includePaths: [path.resolve(__dirname, "node_modules")],
@@ -23,7 +25,9 @@ module.exports = withSass({
               const autoPrefixer = require("autoprefixer")({
                 overrideBrowserslist: ["last 1 version", "ie >= 11"],
               });
-              return [autoPrefixer];
+              return process.env.ENABLE_RTL === "true"
+                ? [autoPrefixer, rtlcss]
+                : [autoPrefixer];
             },
           },
         },

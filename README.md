@@ -1,4 +1,4 @@
-<h1 align="center"> IBM.com Library React with Next.js Template</h1>
+<h1 align="center"> Carbon for IBM.com React with Next.js Template</h1>
 
 ## Table of Contents
 
@@ -12,15 +12,15 @@
 ## Overview
 
 This is a Next.js template utilizing the IBM.com React Library, deploying a vanilla instance of Next.js with the
-[DotcomShell](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/packages/react/src/components/DotcomShell/README.md),
-along with other various patterns and components available in the IBM.com Library.
+[DotcomShell](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/packages/react/src/components/DotcomShell/README.md),
+along with other various patterns and components available in Carbon for IBM.com.
 
 ## Getting Started
 
 Get the code by cloning this repo using git
 
 ```bash
-git clone https://github.com/carbon-design-system/ibm-dotcom-library-nextjs-template.git
+git clone https://github.com/carbon-design-system/carbon-for-ibm-dotcom-nextjs-template.git
 ```
 
 Once cloned, go to the project directory and install dependencies
@@ -29,13 +29,13 @@ Once cloned, go to the project directory and install dependencies
 $ yarn install
 ```
 
-In order for certain services to work such as fetching the masthead/footer menu data in the `<DotcomShell>`, you will
+In order to enable features like Right-to-Left (RTL), you will
 have to set environment variables in a `.env` file. Please see `.env.example`.
 
 ```
-CORS_PROXY=<Sets the proxy for fetching the masthead/footer translation data, e.g. https://myproxy.com/>
 BASE_PATH=<Sets the base directory for urls and assets, default is '' >
 ALTLANG_ROOT_PATH=<Sets the root path for language alternative urls, default is '/' >
+ENABLE_RTL=<Boolean to enable RTL for the page, eg. false >
 ```
 
 Then start the application:
@@ -52,15 +52,14 @@ $ yarn build-export
 
 Then the contents of the `out` folder can be uploaded to your production environment.
 
-## CORS Proxy
+## Right-to-Left (RTL)
 
-The `CORS_PROXY` must be configured in order to properly render the Masthead/Footer links in its default state. To read
-more, visit [CORS Proxy](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/cors-proxy.md).
+Right-to-left rendering is supported, to enable set the `ENABLE_RTL` environment variable to `true`.
 
 ## Things to Note
 
 If building an IBM.com page, there are items that need to be included which can be viewed here:
-[Building for IBM.com](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md)
+[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md)
 
 ### Page Language
 
@@ -72,7 +71,7 @@ This template handles page language functionality, where the available languages
 
 The Digital Data Object (DDO) is a flexible, customizable collection of metadata that also provides tools and services
 such as live chat and analytics to page authors. You can find more details on
-[Building for IBM.com](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md).
+[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md).
 
 The template has a placeholder DDO you can define located in `pages/data/DDO.json. Example values shown below:
 
@@ -89,7 +88,7 @@ The template has a placeholder DDO you can define located in `pages/data/DDO.jso
             language: '', // e.g. en-US
             publishDate: '', // e.g. 2014-11-19
             publisher: '', // e.g. IBM Corporation
-            version: 'Carbon:IBM.com Library',
+            version: 'Carbon for IBM.com',
             ibm: {
                 contentDelivery: '', // e.g. ECM/Filegen
                 contentProducer: '', // e.g. ECM/IConS Adopter 34 - GS83J2343G3H3ERG - 11/19/2014 05:14:02 PM
