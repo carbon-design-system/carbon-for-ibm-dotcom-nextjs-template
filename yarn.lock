@@ -1398,6 +1398,13 @@
     "@carbon/import-once" "^10.3.0"
     "@carbon/layout" "^10.14.0"
 
+"@choojs/findup@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@choojs/findup/-/findup-0.2.1.tgz#ac13c59ae7be6e1da64de0779a0a7f03d75615a3"
+  integrity sha512-YstAqNb0MCN8PjdLCDfRsBcGVRN41f3vgLvaI0IrIcBp4AqILRSS0DeWNGkicC+f/zRIPJLc+9RURVSepwvfBw==
+  dependencies:
+    commander "^2.15.1"
+
 "@commitlint/cli@^8.3.5":
   version "8.3.5"
   resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-8.3.5.tgz#6d93a3a8b2437fa978999d3f6a336bcc70be3fd3"
@@ -3155,7 +3162,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.11.0, commander@^2.14.1, commander@^2.20.0, commander@^2.9.0:
+commander@^2.11.0, commander@^2.14.1, commander@^2.15.1, commander@^2.20.0, commander@^2.9.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -8702,6 +8709,17 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rtlcss@^2.6.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/rtlcss/-/rtlcss-2.6.1.tgz#e65d07bd6c23e13438a3e4c81d38ab000a796dc5"
+  integrity sha512-WoKAYLxT123Gh/9dAPeMY0YWBx6D7IjORJhTbmmq8UJI4zaSxsA0uqPWsXEqGgZT2HEGtxWkhkIZ6g1IvOQ+eg==
+  dependencies:
+    "@choojs/findup" "^0.2.1"
+    chalk "^2.4.2"
+    mkdirp "^0.5.1"
+    postcss "^6.0.23"
+    strip-json-comments "^2.0.0"
+
 run-async@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
@@ -9460,6 +9478,11 @@ strip-indent@^3.0.0:
   integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
   dependencies:
     min-indent "^1.0.0"
+
+strip-json-comments@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
+  integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
 strip-json-comments@^3.0.1:
   version "3.1.0"
