@@ -11,7 +11,7 @@ import React from "react";
 /**
  * Sets the root path of the alternative urls
  * Learn more about configuring alternative languages at:
- * https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md
+ * https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md
  *
  * @type {string|string}
  * @private
@@ -19,9 +19,9 @@ import React from "react";
 const _rootPath = process.env.ALTLANG_ROOT_PATH || "/";
 
 /**
- * Class IbmdotcomLibrary
+ * Class CarbonForIBMDotcom
  */
-export default class IbmdotcomLibrary extends App {
+export default class CarbonForIBMDotcom extends App {
   /**
    * Renders the DotcomShell
    *
