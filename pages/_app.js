@@ -88,7 +88,6 @@ export default class CarbonForIBMDotcom extends App {
             />
           )}
 
-          <Altlang />
           <script src="//1.www.s81c.com/common/stats/ibm-common.js" defer />
         </Head>
         <DotcomShell
