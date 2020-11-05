@@ -1,6 +1,6 @@
 import "../styles/global.scss";
 
-import Altlang from "../components/altlang";
+import altlangs from "./data/altlang.json";
 import App from "next/app";
 import DDO from "./data/DDO.json";
 import { DotcomShell } from "@carbon/ibmdotcom-react";
@@ -9,9 +9,19 @@ import packageJson from "../package.json";
 import React from "react";
 
 /**
- * Class IbmdotcomLibrary
+ * Sets the root path of the alternative urls
+ * Learn more about configuring alternative languages at:
+ * https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md
+ *
+ * @type {string|string}
+ * @private
  */
-export default class IbmdotcomLibrary extends App {
+const _rootPath = process.env.ALTLANG_ROOT_PATH || "/";
+
+/**
+ * Class CarbonForIBMDotcom
+ */
+export default class CarbonForIBMDotcom extends App {
   /**
    * Renders the DotcomShell
    *
@@ -22,6 +32,15 @@ export default class IbmdotcomLibrary extends App {
     const reactVersion = packageJson.dependencies["@carbon/ibmdotcom-react"];
     const stylesVersion = packageJson.dependencies["@carbon/ibmdotcom-styles"];
     const digitalData = `digitalData=${JSON.stringify(DDO)};`;
+
+    const items = altlangs.map((alt, i) => (
+      <link
+        key={i}
+        rel="alternate"
+        hrefLang={`${alt.lc}-${alt.cc}`}
+        href={`${_rootPath}?cc=${alt.cc}&lc=${alt.lc}`}
+      />
+    ));
 
     return (
       <>
@@ -52,10 +71,11 @@ export default class IbmdotcomLibrary extends App {
               digitalData.page.pageInfo.language = lang;
               digitalData.page.pageInfo.ibm.country = params.get('cc').toUpperCase();
             }
-
            `,
             }}
           />
+
+          {items}
 
           {process.env.ENABLE_RTL === "true" && (
             <script
@@ -68,7 +88,6 @@ export default class IbmdotcomLibrary extends App {
             />
           )}
 
-          <Altlang />
           <script src="//1.www.s81c.com/common/stats/ibm-common.js" defer />
         </Head>
         <DotcomShell

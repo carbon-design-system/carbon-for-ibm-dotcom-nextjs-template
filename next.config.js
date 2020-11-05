@@ -11,7 +11,9 @@ module.exports = withSass({
     ENABLE_RTL: process.env.ENABLE_RTL || "false",
   },
   sassLoaderOptions: {
-    includePaths: [path.resolve(__dirname, "node_modules")],
+    sassOptions: {
+      includePaths: [path.resolve(__dirname, "node_modules")],
+    },
   },
   webpack: (config) => {
     config.module.rules.push({
@@ -36,15 +38,25 @@ module.exports = withSass({
             process.env.NODE_ENV === "production"
               ? "sass-loader"
               : "fast-sass-loader",
-          options: {
-            includePaths: [path.resolve(__dirname, "node_modules")],
-            data: `
+          options: Object.assign(
+            process.env.NODE_ENV === "production"
+              ? {
+                  sassOptions: {
+                    includePaths: [path.resolve(__dirname, "node_modules")],
+                  },
+                }
+              : {
+                  includePaths: [path.resolve(__dirname, "node_modules")],
+                },
+            {
+              additionalData: `
               $feature-flags: (
                 enable-css-custom-properties: true
               );
             `,
-            sourceMap: process.env.NODE_ENV !== "production",
-          },
+              sourceMap: process.env.NODE_ENV !== "production",
+            }
+          ),
         },
       ],
     });
