@@ -38,17 +38,25 @@ module.exports = withSass({
             process.env.NODE_ENV === "production"
               ? "sass-loader"
               : "fast-sass-loader",
-          options: {
-            sassOptions: {
-              includePaths: [path.resolve(__dirname, "node_modules")],
-            },
-            additionalData: `
+          options: Object.assign(
+            process.env.NODE_ENV === "production"
+              ? {
+                  sassOptions: {
+                    includePaths: [path.resolve(__dirname, "node_modules")],
+                  },
+                }
+              : {
+                  includePaths: [path.resolve(__dirname, "node_modules")],
+                },
+            {
+              additionalData: `
               $feature-flags: (
                 enable-css-custom-properties: true
               );
             `,
-            sourceMap: process.env.NODE_ENV !== "production",
-          },
+              sourceMap: process.env.NODE_ENV !== "production",
+            }
+          ),
         },
       ],
     });
