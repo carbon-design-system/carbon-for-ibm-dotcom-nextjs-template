@@ -129,3 +129,24 @@ IBM.com Tag Management and Site Analytics Script
 <!-- IBM Tag Management and Site Analytics -->
 <script src="//1.www.s81c.com/common/stats/ibm-common.js" defer></script>
 ```
+
+## Upgrading from the Template
+
+To pull latest changes from the Carbon for IBM.com NextJS template, this repo can be added as a remote to your
+application repository:
+
+```bash
+git remote add template https://github.com/carbon-design-system/carbon-for-ibm-dotcom-nextjs-template.git
+```
+
+Then run `git fetch` to update the changes:
+
+```bash
+git fetch --all
+```
+
+And finally merge changes in:
+
+```bash
+git merge template/master
+```
