@@ -165,12 +165,7 @@ module.exports = {
 
     // General / Sheet
     // Limit the depth of nesting.
-    "max-nesting-depth": [
-      0,
-      {
-        ignoreAtRules: ["if", "else", "each", "include", "mixin"],
-      },
-    ],
+    "max-nesting-depth": OFF,
     // Disallow unknown animations.
     "no-unknown-animations": true,
   },
