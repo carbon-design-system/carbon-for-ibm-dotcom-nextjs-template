@@ -32,7 +32,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@zeit/next-sass": "^1.0.1",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "9.8.6",
     "dotenv": "^8.2.0",
     "eslint": "^6.0.1",
     "eslint-plugin-jsdoc": "^23.0.0",
