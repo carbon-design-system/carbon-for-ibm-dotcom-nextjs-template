@@ -36,6 +36,7 @@ have to set environment variables in a `.env` file. Please see `.env.example`.
 BASE_PATH=<Sets the base directory for urls and assets, default is '' >
 ALTLANG_ROOT_PATH=<Sets the root path for language alternative urls, default is '/' >
 ENABLE_RTL=<Boolean to enable RTL for the page, eg. false >
+SASS_PATH=node_modules:src
 ```
 
 Then start the application:
@@ -51,6 +52,16 @@ $ yarn build-export
 ```
 
 Then the contents of the `out` folder can be uploaded to your production environment.
+
+## SASS compilation and `carbon-components`
+
+ There may be times pathing errors are encountered when importing certain
+stylesheets (like `carbon-components`). We're working hard to fix these, but in the meantime you can add
+the following to your `.env` file to resolve:
+
+```
+SASS_PATH=node_modules:src
+```
 
 ## Right-to-Left (RTL)
 
