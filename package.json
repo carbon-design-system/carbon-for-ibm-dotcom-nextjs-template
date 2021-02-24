@@ -1,6 +1,12 @@
 {
-  "name": "ibm-dotcom-library-nextjs-template",
+  "name": "carbon-for-ibm-dotcom-nextjs-template",
   "private": true,
+  "version": "0.0.0",
+  "repository": "git@github.com:carbon-design-system/carbon-for-ibm-dotcom-nextjs-template.git",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "12.x"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
@@ -14,18 +20,19 @@
     "build-export": "next build && next export",
     "lint": "eslint pages",
     "lint:styles": "stylelint '**/*.{css,scss}' --config ./packages/stylelint-config-ibmdotcom",
-    "update": "yarn upgrade @carbon/ibmdotcom-react@canary && yarn upgrade @carbon/ibmdotcom-styles@canary",
-    "update-staging": "yarn upgrade @carbon/ibmdotcom-react@latest && yarn upgrade @carbon/ibmdotcom-styles@latest"
+    "update-canary": "yarn upgrade @carbon/ibmdotcom-react@canary && yarn upgrade @carbon/ibmdotcom-styles@canary",
+    "update-next": "yarn upgrade @carbon/ibmdotcom-react@next && yarn upgrade @carbon/ibmdotcom-styles@next",
+    "update-latest": "yarn upgrade @carbon/ibmdotcom-react@latest && yarn upgrade @carbon/ibmdotcom-styles@latest"
   },
   "dependencies": {
-    "@carbon/ibmdotcom-react": "^1.8.0-rc.3",
-    "@carbon/ibmdotcom-styles": "^1.8.0-rc.2",
+    "@carbon/ibmdotcom-react": "^1.16.0",
+    "@carbon/ibmdotcom-styles": "^1.16.0",
     "@carbon/icons-react": "^10.9.1",
     "@carbon/pictograms-react": "^10.9.0",
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@zeit/next-css": "^1.0.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@zeit/next-sass": "^1.0.1",
+    "autoprefixer": "9.8.6",
     "dotenv": "^8.2.0",
     "eslint": "^6.0.1",
     "eslint-plugin-jsdoc": "^23.0.0",
@@ -34,20 +41,24 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-plugin-tree-shaking": "^1.8.0",
     "express": "^4.17.1",
+    "fast-sass-loader": "1.5.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
-    "next": "9.3.2",
+    "next": "9.5.5",
     "next-compose-plugins": "^2.2.0",
-    "next-progressbar": "^1.0.0",
     "node-sass": "^4.13.0",
     "prettier": "^2.0.4",
     "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0",
+    "rtlcss": "^2.6.0",
     "stylelint": "^13.3.2",
     "webpack": "^4.41.5"
   },
   "resolutions": {
-    "serialize-javascript": ">= 2.1.2"
+    "dot-prop": ">=5.1.1",
+    "node-fetch": ">=2.6.1",
+    "object-path": ">=0.11.5",
+    "serialize-javascript": ">= 3.1.0"
   }
 }

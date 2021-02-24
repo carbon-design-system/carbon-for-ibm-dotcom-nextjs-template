@@ -1,4 +1,4 @@
-<h1 align="center"> IBM.com Library React with Next.js Template</h1>
+<h1 align="center"> Carbon for IBM.com React with Next.js Template</h1>
 
 ## Table of Contents
 
@@ -8,19 +8,19 @@
   - [Page Language](#page-language)
   - [Digital Data Object](#digital-data-object)
   - [Meta Tags & IBM.com Tag Management and Site Analytics](#meta-tags-and-analytics)
-- [Locale / Language Page Detection](#locale--language-page-detection)
 
 ## Overview
 
-This is a Next.js template utilizing the IBM.com React Library, deploying a vanilla instance of Next.js with the [DotcomShell](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/packages/react/src/components/DotcomShell/README.md),
-along with other various patterns and components available in the IBM.com Library.
+This is a Next.js template utilizing Carbon for IBM.com React, deploying a vanilla instance of Next.js with the
+[DotcomShell](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/packages/react/src/components/DotcomShell/README.md),
+along with other various patterns and components available in Carbon for IBM.com.
 
 ## Getting Started
 
 Get the code by cloning this repo using git
 
 ```bash
-git clone https://github.com/carbon-design-system/ibm-dotcom-library-nextjs-template.git
+git clone https://github.com/carbon-design-system/carbon-for-ibm-dotcom-nextjs-template.git
 ```
 
 Once cloned, go to the project directory to install dependencies and build the project
@@ -29,11 +29,14 @@ Once cloned, go to the project directory to install dependencies and build the p
 $ yarn && yarn build
 ```
 
-In order for certain services to work such as fetching the masthead/footer menu data in the `<DotcomShell>`, you will have to set environment variables in a `.env` file. Please see `.env.example`.
+In order to enable features like Right-to-Left (RTL), you will
+have to set environment variables in a `.env` file. Please see `.env.example`.
 
 ```
-CORS_PROXY=<Sets the proxy for fetching the masthead/footer translation data, e.g. https://myproxy.com/>
-ROOT_PATH=<Sets the root path for language alternative urls, default is '/' >
+BASE_PATH=<Sets the base directory for urls and assets, default is '' >
+ALTLANG_ROOT_PATH=<Sets the root path for language alternative urls, default is '/' >
+ENABLE_RTL=<Boolean to enable RTL for the page, eg. false >
+SASS_PATH=node_modules:src
 ```
 
 Then start the application:
@@ -50,17 +53,36 @@ $ yarn build-export
 
 Then the contents of the `out` folder can be uploaded to your production environment.
 
+## SASS compilation and `carbon-components`
+
+ There may be times pathing errors are encountered when importing certain
+stylesheets (like `carbon-components`). We're working hard to fix these, but in the meantime you can add
+the following to your `.env` file to resolve:
+
+```
+SASS_PATH=node_modules:src
+```
+
+## Right-to-Left (RTL)
+
+Right-to-left rendering is supported, to enable set the `ENABLE_RTL` environment variable to `true`.
+
 ## Things to Note
 
-If building an IBM.com page, there are items that need to be included which can be viewed here: [Building for IBM.com](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md)
+If building an IBM.com page, there are items that need to be included which can be viewed here:
+[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md)
 
 ### Page Language
 
-This template handles page language functionality, where the available languages are defined in `components/data/altlang.json`. The `Altlangs` component then generates all alternate links to be injected into the `<head>` element.
+This template handles page language functionality, where the available languages are defined in
+`components/data/altlang.json`. The `Altlangs` component then generates all alternate links to be injected into the
+`<head>` element.
 
 ### Digital Data Object
 
-The Digital Data Object (DDO) is a flexible, customizable collection of metadata that also provides tools and services such as live chat and analytics to page authors. You can find more details on [Building for IBM.com](https://github.com/carbon-design-system/ibm-dotcom-library/blob/master/docs/building-for-ibm-dotcom.md).
+The Digital Data Object (DDO) is a flexible, customizable collection of metadata that also provides tools and services
+such as live chat and analytics to page authors. You can find more details on
+[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md).
 
 The template has a placeholder DDO you can define located in `pages/data/DDO.json. Example values shown below:
 
@@ -77,7 +99,7 @@ The template has a placeholder DDO you can define located in `pages/data/DDO.jso
             language: '', // e.g. en-US
             publishDate: '', // e.g. 2014-11-19
             publisher: '', // e.g. IBM Corporation
-            version: '', // e.g. dds.v1.0.0. NOTE: This is dynamically set by the IBM.com Library
+            version: 'Carbon for IBM.com',
             ibm: {
                 contentDelivery: '', // e.g. ECM/Filegen
                 contentProducer: '', // e.g. ECM/IConS Adopter 34 - GS83J2343G3H3ERG - 11/19/2014 05:14:02 PM
@@ -96,7 +118,8 @@ The template has a placeholder DDO you can define located in `pages/data/DDO.jso
 
 ### Meta Tags and Analytics
 
-The template already renders the required meta tags and IBM.com analytics script that are required for IBM.com websites. They are located in `pages/_app.js`.These can be adjusted/removed to fit your project and needs.
+The template already renders the required meta tags and IBM.com analytics script that are required for IBM.com websites.
+They are located in `pages/_app.js`.These can be adjusted/removed to fit your project and needs.
 
 Meta Tags:
 
@@ -115,9 +138,26 @@ IBM.com Tag Management and Site Analytics Script
 
 ```html
 <!-- IBM Tag Management and Site Analytics -->
-<script src="//1.www.s81c.com/common/stats/ibm-common.js"></script>
+<script src="//1.www.s81c.com/common/stats/ibm-common.js" defer></script>
 ```
 
-## Locale / Language Page Detection
+## Upgrading from the Template
 
-The template uses `_document.js` to dynamically change the html `lang` attribute that is used for the Locale Selector services. This is currently NextJS's only documented way of augmenting the document markup. There are some caveats with this approach - one being that the `lang` does not get updated when you export your app to static HTML. We suggest moving the `lang` swapping logic out to client side if you wish to export to a static site.
+To pull latest changes from the Carbon for IBM.com NextJS template, this repo can be added as a remote to your
+application repository:
+
+```bash
+git remote add template https://github.com/carbon-design-system/carbon-for-ibm-dotcom-nextjs-template.git
+```
+
+Then run `git fetch` to update the changes:
+
+```bash
+git fetch --all
+```
+
+And finally merge changes in:
+
+```bash
+git merge template/master
+```

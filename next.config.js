@@ -1,55 +1,66 @@
 require("dotenv").config();
 const path = require("path");
-const withCSS = require("@zeit/next-css");
 const withSass = require("@zeit/next-sass");
-const withProgressBar = require("next-progressbar");
+const rtlcss = require("rtlcss");
 
-const styleLoaders = [
-  {
-    loader: "postcss-loader",
-    options: {
-      plugins: () => {
-        const autoPrefixer = require("autoprefixer")({
-          overrideBrowserslist: ["last 1 version", "ie >= 11"],
-        });
-        return [autoPrefixer];
-      },
-    },
+module.exports = withSass({
+  assetPrefix: ".",
+  basePath: process.env.BASE_PATH || "",
+  env: {
+    ALTLANG_ROOT_PATH: process.env.ALTLANG_ROOT_PATH || "/",
+    ENABLE_RTL: process.env.ENABLE_RTL || "false",
   },
-  {
-    loader: "sass-loader",
-    options: {
+  sassLoaderOptions: {
+    sassOptions: {
       includePaths: [path.resolve(__dirname, "node_modules")],
-      data: `
-      $feature-flags: (
-        ui-shell: true,
-      );
-    `,
-      sourceMap: true,
     },
   },
-];
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      sideEffects: true,
+      use: [
+        {
+          loader: "postcss-loader",
+          options: {
+            plugins: () => {
+              const autoPrefixer = require("autoprefixer")({
+                overrideBrowserslist: ["last 1 version", "ie >= 11"],
+              });
+              return process.env.ENABLE_RTL === "true"
+                ? [autoPrefixer, rtlcss]
+                : [autoPrefixer];
+            },
+          },
+        },
+        {
+          loader:
+            process.env.NODE_ENV === "production"
+              ? "sass-loader"
+              : "fast-sass-loader",
+          options: Object.assign(
+            process.env.NODE_ENV === "production"
+              ? {
+                  sassOptions: {
+                    includePaths: [path.resolve(__dirname, "node_modules")],
+                  },
+                }
+              : {
+                  includePaths: [path.resolve(__dirname, "node_modules")],
+                },
+            {
+              additionalData: `
+              $feature-flags: (
+                enable-css-custom-properties: true
+              );
+            `,
+              sourceMap: process.env.NODE_ENV !== "production",
+            }
+          ),
+        },
+      ],
+    });
 
-module.exports = withProgressBar(
-  withSass(
-    withCSS({
-      assetPrefix: ".",
-      env: {
-        CORS_PROXY: process.env.CORS_PROXY || "",
-        ROOT_PATH: process.env.ROOT_PATH || "/",
-      },
-      sassLoaderOptions: {
-        includePaths: [path.resolve(__dirname, "node_modules")],
-      },
-      webpack: (config) => {
-        config.module.rules.push({
-          test: /\.scss$/,
-          sideEffects: true,
-          use: [...styleLoaders],
-        });
-
-        return config;
-      },
-    })
-  )
-);
+    return config;
+  },
+});
