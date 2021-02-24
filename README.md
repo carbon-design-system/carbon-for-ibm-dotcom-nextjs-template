@@ -23,10 +23,10 @@ Get the code by cloning this repo using git
 git clone https://github.com/carbon-design-system/carbon-for-ibm-dotcom-nextjs-template.git
 ```
 
-Once cloned, go to the project directory and install dependencies
+Once cloned, go to the project directory to install dependencies and build the project
 
 ```bash
-$ yarn install
+$ yarn && yarn build
 ```
 
 In order to enable features like Right-to-Left (RTL), you will
