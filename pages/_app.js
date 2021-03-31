@@ -88,7 +88,10 @@ export default class CarbonForIBMDotcom extends App {
             />
           )}
           {process.browser && (
-            <script src="//1.www.s81c.com/common/stats/ibm-common.js" defer />
+            <script
+              src="//1.www.s81c.com/common/stats/ibm-common.js"
+              async="async"
+            />
           )}
         </Head>
         <DotcomShell
