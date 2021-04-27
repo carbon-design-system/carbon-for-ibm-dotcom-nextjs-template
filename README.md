@@ -55,13 +55,19 @@ Then the contents of the `out` folder can be uploaded to your production environ
 
 ## SASS compilation and `carbon-components`
 
- There may be times pathing errors are encountered when importing certain
+There may be times pathing errors are encountered when importing certain
 stylesheets (like `carbon-components`). We're working hard to fix these, but in the meantime you can add
 the following to your `.env` file to resolve:
 
 ```
 SASS_PATH=node_modules:src
 ```
+
+> **Note:** For Windows, the syntax is slightly different
+>
+> ```
+> SASS_PATH=./node_modules;./src
+> ```
 
 ## Right-to-Left (RTL)
 

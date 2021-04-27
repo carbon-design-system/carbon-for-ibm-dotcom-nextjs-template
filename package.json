@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cross-env SASS_PATH=node_modules:src next build",
     "export": "next export",
     "start": "node server.js",
     "build-export": "next build && next export",
@@ -28,11 +28,14 @@
     "@carbon/ibmdotcom-react": "^1.18.0",
     "@carbon/ibmdotcom-styles": "^1.18.0",
     "@carbon/icons-react": "^10.9.1",
-    "@carbon/pictograms-react": "^10.9.0",
+    "@carbon/pictograms-react": "^10.9.0"
+  },
+  "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "9.8.6",
+    "cross-env": "7.0.3",
     "dotenv": "^8.2.0",
     "eslint": "^6.0.1",
     "eslint-plugin-jsdoc": "^23.0.0",
