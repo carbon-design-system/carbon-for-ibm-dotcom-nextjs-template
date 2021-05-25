@@ -14,6 +14,10 @@ import {
   CardSectionSimple,
 } from "@carbon/ibmdotcom-react";
 import { ArrowRight20 } from "@carbon/icons-react";
+import DDSCard from "@carbon/ibmdotcom-web-components/es/components-react/card/card";
+import DDSCardFooter from "@carbon/ibmdotcom-web-components/es/components-react/card/card-footer";
+import DDSCardHeading from "@carbon/ibmdotcom-web-components/es/components-react/card/card-heading";
+import DDSCarousel from "@carbon/ibmdotcom-web-components/es/components-react/carousel/carousel";
 import React from "react";
 
 /**
@@ -46,6 +50,50 @@ const Home = () => (
       }}
     />
     <TableOfContents menuLabel="Jump to" theme="white" stickyOffset={48}>
+      <DDSCarousel>
+        <DDSCard href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom">
+          <DDSCardHeading>fdsa</DDSCardHeading>
+          fdsafsda
+          <DDSCardFooter>
+            <ArrowRight20 slot="icon" />
+          </DDSCardFooter>
+        </DDSCard>
+        <DDSCard href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom">
+          <DDSCardHeading>fdsa</DDSCardHeading>
+          fdsafsda
+          <DDSCardFooter>
+            <ArrowRight20 slot="icon" />
+          </DDSCardFooter>
+        </DDSCard>
+        <DDSCard href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom">
+          <DDSCardHeading>fdsa</DDSCardHeading>
+          fdsafsda
+          <DDSCardFooter>
+            <ArrowRight20 slot="icon" />
+          </DDSCardFooter>
+        </DDSCard>
+        <DDSCard href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom">
+          <DDSCardHeading>fdsa</DDSCardHeading>
+          fdsafsda
+          <DDSCardFooter>
+            <ArrowRight20 slot="icon" />
+          </DDSCardFooter>
+        </DDSCard>
+        <DDSCard href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom">
+          <DDSCardHeading>fdsa</DDSCardHeading>
+          fdsafsda
+          <DDSCardFooter>
+            <ArrowRight20 slot="icon" />
+          </DDSCardFooter>
+        </DDSCard>
+        <DDSCard href="https://www.ibm.com/standards/web/carbon-for-ibm-dotcom">
+          <DDSCardHeading>fdsa</DDSCardHeading>
+          fdsafsda
+          <DDSCardFooter>
+            <ArrowRight20 slot="icon" />
+          </DDSCardFooter>
+        </DDSCard>
+      </DDSCarousel>
       <a name="content-block-mixed" data-title="Content Block - Mixed Groups" />
       <ContentBlockMixed
         heading="Content Block - Mixed Groups"

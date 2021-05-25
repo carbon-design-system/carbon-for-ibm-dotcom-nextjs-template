@@ -26,9 +26,12 @@
   },
   "dependencies": {
     "@carbon/ibmdotcom-react": "^1.18.1",
+    "@carbon/ibmdotcom-web-components": "^1.4.0",
     "@carbon/ibmdotcom-styles": "^1.18.1",
     "@carbon/icons-react": "^10.9.1",
-    "@carbon/pictograms-react": "^10.9.0"
+    "@carbon/pictograms-react": "^10.9.0",
+    "lit-element": "~2.4.0",
+    "lit-html": "~1.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
