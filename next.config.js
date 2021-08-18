@@ -1,12 +1,5 @@
-require("dotenv").config();
 const path = require("path");
-const rtlcss = require("rtlcss");
-
-const postcssPlugins = [];
-
-if (process.env.ENABLE_RTL === "true") {
-  postcssPlugins.push(rtlcss);
-}
+require("dotenv").config();
 
 module.exports = {
   assetPrefix: ".",
