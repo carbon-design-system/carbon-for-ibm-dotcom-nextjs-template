@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content,jsx-a11y/anchor-is-valid */
+// import "../styles/landing.scss";
 import { Desktop, Pattern, Touch } from "@carbon/pictograms-react";
 import {
   TableOfContents,
@@ -14,7 +15,6 @@ import {
 } from "@carbon/ibmdotcom-react";
 import { ArrowRight20 } from "@carbon/icons-react";
 import React from "react";
-// import styles from "../styles/landing.module.scss";
 
 /**
  * Homepage
