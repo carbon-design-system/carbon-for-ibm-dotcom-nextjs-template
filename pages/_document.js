@@ -20,15 +20,15 @@ class CarbonForIBMDotcomDocument extends Document {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-						var params = new URLSearchParams(window.location.search);
-						
-						if(params.has('lc') && params.has('cc')) {
-							var lang = params.get('lc') + '-' + params.get('cc').toUpperCase();
-							document.getElementsByTagName("html")[0].setAttribute("lang", lang);
-							digitalData.page.pageInfo.language = lang;
-							digitalData.page.pageInfo.ibm.country = params.get('cc').toUpperCase();
-						}
-					`,
+              var params = new URLSearchParams(window.location.search);
+
+              if(params.has('lc') && params.has('cc')) {
+                var lang = params.get('lc') + '-' + params.get('cc').toUpperCase();
+                document.getElementsByTagName("html")[0].setAttribute("lang", lang);
+                digitalData.page.pageInfo.language = lang;
+                digitalData.page.pageInfo.ibm.country = params.get('cc').toUpperCase();
+              }
+							`,
             }}
           />
         </Head>
