@@ -2,7 +2,6 @@ import "../styles/global.scss";
 
 import altlangs from "./data/altlang.json";
 import App from "next/app";
-import DDO from "./data/DDO.json";
 import { DotcomShell } from "@carbon/ibmdotcom-react";
 import Head from "next/head";
 import packageJson from "../package.json";
@@ -31,7 +30,6 @@ export default class CarbonForIBMDotcom extends App {
     const { Component, pageProps } = this.props;
     const reactVersion = packageJson.dependencies["@carbon/ibmdotcom-react"];
     const stylesVersion = packageJson.dependencies["@carbon/ibmdotcom-styles"];
-    const digitalData = `digitalData=${JSON.stringify(DDO)};`;
 
     const items = altlangs.map((alt, i) => (
       <link
@@ -57,23 +55,6 @@ export default class CarbonForIBMDotcom extends App {
           <meta name="dcterms.rights" content="© Copyright IBM Corp. 2020" />
           <meta name="geo.country" content="US" />
           <meta name="robots" content="index,follow" />
-
-          <script dangerouslySetInnerHTML={{ __html: digitalData }} />
-
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            var params = new URLSearchParams(window.location.search);
-            
-            if(params.has('lc') && params.has('cc')) {
-              var lang = params.get('lc') + '-' + params.get('cc').toUpperCase();
-              document.getElementsByTagName("html")[0].setAttribute("lang", lang);
-              digitalData.page.pageInfo.language = lang;
-              digitalData.page.pageInfo.ibm.country = params.get('cc').toUpperCase();
-            }
-           `,
-            }}
-          />
 
           {items}
 
