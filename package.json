@@ -25,7 +25,7 @@
     "update-latest": "yarn upgrade @carbon/ibmdotcom-react@latest && yarn upgrade @carbon/ibmdotcom-styles@latest"
   },
   "dependencies": {
-    "@carbon/ibmdotcom-react": "^1.23.2",
+    "@carbon/ibmdotcom-react": "^1.23.3",
     "@carbon/ibmdotcom-styles": "^1.23.0",
     "@carbon/icons-react": "^10.9.1",
     "@carbon/pictograms-react": "^10.9.0"
