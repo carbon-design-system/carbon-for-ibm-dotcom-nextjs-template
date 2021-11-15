@@ -3278,7 +3278,7 @@ eslint-plugin-jsdoc@^15.3.7:
     object.entries-ponyfill "^1.0.1"
     regextras "^0.6.1"
 
-eslint-plugin-jsdoc@^23.0.0:
+eslint-plugin-jsdoc@^23.0.1:
   version "23.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-23.1.0.tgz#81843b60b6bc1761de9f98ebe14bfd0eff44b6dd"
   integrity sha512-5cIL9M6/mCEQiEpJpvvjwpLPIMTpSKGjXr3i/gHEaJAUJLBkTZbQ/vTi0/Dzv6LKBoRCAzigWr91a3vor4gwLg==
