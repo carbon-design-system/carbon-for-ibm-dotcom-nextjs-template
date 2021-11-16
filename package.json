@@ -36,7 +36,7 @@
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "9.8.8",
     "cross-env": "7.0.3",
-    "dotenv": "8.6.0",
+    "dotenv": "10.0.0",
     "eslint": "^6.0.1",
     "eslint-plugin-jsdoc": "^23.1.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
