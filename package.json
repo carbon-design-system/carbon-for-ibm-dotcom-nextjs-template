@@ -56,7 +56,7 @@
     "react-dom": "16.14.0",
     "rtlcss": "^2.6.2",
     "stylelint": "^13.3.2",
-    "webpack": "^4.41.5"
+    "webpack": "^5.0.0"
   },
   "resolutions": {
     "dot-prop": ">=6.0.1",
