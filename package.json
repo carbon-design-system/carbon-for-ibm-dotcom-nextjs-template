@@ -34,7 +34,7 @@
     "@commitlint/cli": "^14.0.0",
     "@commitlint/config-conventional": "^14.0.0",
     "@zeit/next-sass": "^1.0.1",
-    "autoprefixer": "9.8.8",
+    "autoprefixer": "10.4.0",
     "cross-env": "7.0.3",
     "dotenv": "10.0.0",
     "eslint": "^8.0.0",
