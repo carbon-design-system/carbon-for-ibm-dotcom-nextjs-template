@@ -27,7 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "^7.13.0",
-    "eslint-plugin-react-hooks": "^1.6.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
     "eslint-plugin-tree-shaking": "^1.7.4",
     "eslint-restricted-globals": "^0.2.0"
   }
