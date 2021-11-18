@@ -28,7 +28,7 @@
     "@carbon/ibmdotcom-react": "^1.27.0",
     "@carbon/ibmdotcom-styles": "^1.27.0",
     "@carbon/icons-react": "^10.9.1",
-    "@carbon/pictograms-react": "^10.9.0"
+    "@carbon/pictograms-react": "^11.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
