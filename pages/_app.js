@@ -10,7 +10,7 @@ import React from "react";
 /**
  * Sets the root path of the alternative urls
  * Learn more about configuring alternative languages at:
- * https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md
+ * https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/main/docs/building-for-ibm-dotcom.md
  *
  * @type {string|string}
  * @private

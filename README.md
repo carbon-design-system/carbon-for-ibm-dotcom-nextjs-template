@@ -12,7 +12,7 @@
 ## Overview
 
 This is a Next.js template utilizing Carbon for IBM.com React, deploying a vanilla instance of Next.js with the
-[DotcomShell](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/packages/react/src/components/DotcomShell/README.md),
+[DotcomShell](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/main/packages/react/src/components/DotcomShell/README.md),
 along with other various patterns and components available in Carbon for IBM.com.
 
 ## Getting Started
@@ -76,7 +76,7 @@ Right-to-left rendering is supported, to enable set the `ENABLE_RTL` environment
 ## Things to Note
 
 If building an IBM.com page, there are items that need to be included which can be viewed here:
-[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md)
+[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/main/docs/building-for-ibm-dotcom.md)
 
 ### Page Language
 
@@ -88,7 +88,7 @@ This template handles page language functionality, where the available languages
 
 The Digital Data Object (DDO) is a flexible, customizable collection of metadata that also provides tools and services
 such as live chat and analytics to page authors. You can find more details on
-[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/master/docs/building-for-ibm-dotcom.md).
+[Building for IBM.com](https://github.com/carbon-design-system/carbon-for-ibm-dotcom/blob/main/docs/building-for-ibm-dotcom.md).
 
 The template has a placeholder DDO you can define located in `pages/data/DDO.json. Example values shown below:
 
@@ -165,5 +165,5 @@ git fetch --all
 And finally merge changes in:
 
 ```bash
-git merge template/master
+git merge template/main
 ```
