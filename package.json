@@ -20,6 +20,7 @@
     "build-export": "next build && next export",
     "lint": "eslint pages",
     "lint:styles": "stylelint '**/*.{css,scss}' --config ./packages/stylelint-config-ibmdotcom",
+    "prepare": "husky install",
     "update-canary": "yarn upgrade @carbon/ibmdotcom-react@canary && yarn upgrade @carbon/ibmdotcom-styles@canary",
     "update-next": "yarn upgrade @carbon/ibmdotcom-react@next && yarn upgrade @carbon/ibmdotcom-styles@next",
     "update-latest": "yarn upgrade @carbon/ibmdotcom-react@latest && yarn upgrade @carbon/ibmdotcom-styles@latest"
