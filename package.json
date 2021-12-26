@@ -32,8 +32,8 @@
     "@carbon/pictograms-react": "^11.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/cli": "^16.0.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "9.8.8",
     "cross-env": "7.0.3",
