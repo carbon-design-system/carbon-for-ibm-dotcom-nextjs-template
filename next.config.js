@@ -4,8 +4,10 @@ const withSass = require("@zeit/next-sass");
 const rtlcss = require("rtlcss");
 
 module.exports = withSass({
+  experimental: {
+    basePath: process.env.BASE_PATH || "",
+  },
   assetPrefix: ".",
-  basePath: process.env.BASE_PATH || "",
   env: {
     ALTLANG_ROOT_PATH: process.env.ALTLANG_ROOT_PATH || "/",
     ENABLE_RTL: process.env.ENABLE_RTL || "false",
