@@ -1,6 +1,6 @@
 require("dotenv").config();
 const path = require("path");
-const sass = require("node-sass");
+const sass = require("sass");
 
 module.exports = {
   swcMinify: true,
