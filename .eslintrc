@@ -1,3 +1,6 @@
 {
-  "extends": ["./packages/eslint-config-ibmdotcom"]
+  "extends": ["eslint-config-carbon"],
+  "rules": {
+    "jsx-a11y/anchor-is-valid": 0
+  }
 }

@@ -1,4 +1,5 @@
 import "../styles/global.scss";
+import "../styles/landing.scss";
 
 import altlangs from "./data/altlang.json";
 import App from "next/app";

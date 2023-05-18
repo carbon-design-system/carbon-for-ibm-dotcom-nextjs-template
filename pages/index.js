@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import "../styles/landing.scss";
 import { Desktop, Pattern, Touch } from "@carbon/pictograms-react";
 import {
   TableOfContents,
@@ -68,8 +67,7 @@ const Home = () => (
               {
                 heading:
                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt",
-                copy:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 cta: {
                   href: "https://www.example.com",
                 },
@@ -93,8 +91,7 @@ const Home = () => (
               {
                 heading:
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                copy:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
                 cta: {
                   href: "https://www.example.com",
                 },
@@ -107,8 +104,7 @@ const Home = () => (
             items: [
               {
                 heading: "Aliquam condimentum interdum",
-                copy:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+                copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
                 cta: {
                   href: "https://www.example.com",
                   type: "local",
@@ -121,8 +117,7 @@ const Home = () => (
               },
               {
                 heading: "Aliquam condimentum interdum",
-                copy:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+                copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
                 cta: {
                   href: "https://www.example.com",
                   type: "local",
@@ -135,8 +130,7 @@ const Home = () => (
               },
               {
                 heading: "Aliquam condimentum interdum",
-                copy:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+                copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
                 cta: {
                   href: "https://www.example.com",
                   type: "local",
@@ -157,18 +151,15 @@ const Home = () => (
               image: {
                 sources: [
                   {
-                    src:
-                      "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
                     breakpoint: 320,
                   },
                   {
-                    src:
-                      "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
                     breakpoint: 400,
                   },
                   {
-                    src:
-                      "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
                     breakpoint: 672,
                   },
                 ],
@@ -181,13 +172,11 @@ const Home = () => (
             items: [
               {
                 heading: "Lorem ipsum dolor sit amet.",
-                copy:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
+                copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
               },
               {
                 heading: "Lorem ipsum dolor sit amet.",
-                copy:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
+                copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
               },
             ],
           },
@@ -241,18 +230,15 @@ const Home = () => (
               image: {
                 sources: [
                   {
-                    src:
-                      "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
                     breakpoint: 320,
                   },
                   {
-                    src:
-                      "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
                     breakpoint: 400,
                   },
                   {
-                    src:
-                      "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
                     breakpoint: 672,
                   },
                 ],
@@ -264,7 +250,7 @@ const Home = () => (
             items={[
               {
                 heading: "Lorem ipsum dolor sit amet.",
-                copy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien. 
+                copy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.`,
               },
               {
@@ -274,18 +260,15 @@ const Home = () => (
                   image: {
                     sources: [
                       {
-                        src:
-                          "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
                         breakpoint: 320,
                       },
                       {
-                        src:
-                          "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
                         breakpoint: 400,
                       },
                       {
-                        src:
-                          "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
                         breakpoint: 672,
                       },
                     ],
@@ -321,18 +304,15 @@ const Home = () => (
               image: {
                 sources: [
                   {
-                    src:
-                      "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
                     breakpoint: 320,
                   },
                   {
-                    src:
-                      "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
                     breakpoint: 400,
                   },
                   {
-                    src:
-                      "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
+                    src: "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
                     breakpoint: 672,
                   },
                 ],
@@ -374,18 +354,15 @@ const Home = () => (
                   image: {
                     sources: [
                       {
-                        src:
-                          "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
                         breakpoint: 320,
                       },
                       {
-                        src:
-                          "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
                         breakpoint: 400,
                       },
                       {
-                        src:
-                          "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
                         breakpoint: 672,
                       },
                     ],
@@ -398,13 +375,11 @@ const Home = () => (
                 items: [
                   {
                     heading: "Lorem ipsum dolor sit amet.",
-                    copy:
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
+                    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
                   },
                   {
                     heading: "Lorem ipsum dolor sit amet.",
-                    copy:
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
+                    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
                   },
                 ],
                 cta: {
@@ -423,18 +398,15 @@ const Home = () => (
                   image: {
                     sources: [
                       {
-                        src:
-                          "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/320x180/ee5396/161616&text=16:9",
                         breakpoint: 320,
                       },
                       {
-                        src:
-                          "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/400x225/ee5396/161616&text=16:9",
                         breakpoint: 400,
                       },
                       {
-                        src:
-                          "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
+                        src: "https://dummyimage.com/672x378/ee5396/161616&text=16:9",
                         breakpoint: 672,
                       },
                     ],
@@ -447,13 +419,11 @@ const Home = () => (
                 items: [
                   {
                     heading: "Lorem ipsum dolor sit amet.",
-                    copy:
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
+                    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
                   },
                   {
                     heading: "Lorem ipsum dolor sit amet.",
-                    copy:
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
+                    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed interdum tortor. Sed id pellentesque diam. In ut quam id mauris finibus efficitur quis ut arcu. Praesent purus turpis, venenatis eget odio et, tincidunt bibendum sem. Curabitur pretium elit non blandit lobortis. Donec quis pretium odio, in dignissim sapien.",
                   },
                 ],
                 cta: {
@@ -560,40 +530,35 @@ const Home = () => (
       cards={[
         {
           heading: "Nunc convallis lobortis",
-          copy:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+          copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
           cta: {
             href: "https://www.example.com",
           },
         },
         {
           heading: "Fusce gravida eu arcu",
-          copy:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+          copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
           cta: {
             href: "https://www.example.com",
           },
         },
         {
           heading: "Interdum et malesuada",
-          copy:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+          copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
           cta: {
             href: "https://www.example.com",
           },
         },
         {
           heading: "Nunc convallis loborti",
-          copy:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+          copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
           cta: {
             href: "https://www.example.com",
           },
         },
         {
           heading: "Nunc convallis lbortis",
-          copy:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
+          copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit. Phasellus at elit sollicitudin, sodales nulla quis, consequat libero.",
           cta: {
             href: "https://www.example.com",
           },
