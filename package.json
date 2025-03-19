@@ -43,7 +43,7 @@
     "express": "^4.17.1",
     "husky": "^7.0.0",
     "lint-staged": "^13.0.3",
-    "next": "^12.3.4",
+    "next": "^14.2.21",
     "next-compose-plugins": "^2.2.1",
     "prettier": "^2.0.4",
     "prop-types": "^15.7.2",
