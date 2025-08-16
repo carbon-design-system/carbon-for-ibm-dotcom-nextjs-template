@@ -35,7 +35,7 @@
     "@babel/core": "^7.18.2",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
-    "babel-preset-carbon": "^0.0.14",
+    "babel-preset-carbon": "^0.8.0",
     "cross-env": "7.0.3",
     "dotenv": "10.0.0",
     "eslint": "^8.0.0",
